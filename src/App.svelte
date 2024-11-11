@@ -9,13 +9,21 @@
   let scene, scene2, camera, camera2, renderer, renderer2;
   let dots = [];
   let dots2 = [];
-  const numNodes = 1786;
-  const numNodes2 = 1585;
+  const numNodes = 1748;
+  const numNodes2 = 1751;
   let radius;
   let highlightDots = false;
   let highlightDots2Active = false;
   let animatePosition = false;
   let duplicateCircle = false;
+
+  // const Color_fushun = '#D991B2';
+  const Color_fushun = '#FCD7CB';
+  const Color_newborn = '#C7E3BB';
+  const Color_US = '#BFBFBF';
+  const background_white = 0xffffff;
+  const background_black = 0x000000;
+  const background_grey = "#727272"
 
   const nodes = Array.from({ length: numNodes }, () => ({
     x: (Math.random() - 0.5) * 2 * radius,
@@ -43,7 +51,7 @@
 
   onMount(() => {
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffffff);
+    scene.background = new THREE.Color(background_grey);
 
     camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera.position.z = 300;
@@ -54,7 +62,7 @@
     container.appendChild(renderer.domElement);
 
     const geometry = new THREE.SphereGeometry(2, 32, 32);
-    const material = new THREE.MeshBasicMaterial({ color: '#D991B2' });
+    const material = new THREE.MeshBasicMaterial({ color: Color_fushun });
 
     for (let i = 0; i < numNodes; i++) {
       const dot = new THREE.Mesh(geometry, material.clone());
@@ -73,26 +81,26 @@
   });
 
   function highlightClosestDots(dotsArray, nodesArray) {
-    const highlightIndices = highlightDots ? findClosestDots(nodesArray, 5) : [];
+    const highlightIndices = highlightDots ? findClosestDots(nodesArray, 6) : [];
     dotsArray.forEach((dot, index) => {
       if (highlightIndices.includes(index)) {
-        dot.material.color.set('#64BC52');
+        dot.material.color.set(Color_newborn);
         dot.scale.set(2, 2, 2);
       } else {
-        dot.material.color.set('#F8AA9A');
+        dot.material.color.set(Color_fushun);
         dot.scale.set(1, 1, 1);
       }
     });
   }
 
   function highlightClosestDots2(dotsArray, nodesArray) {
-    const highlightIndices = highlightDots2Active ? findClosestDots(nodesArray, 19) : [];
+    const highlightIndices = highlightDots2Active ? findClosestDots(nodesArray, 20) : [];
     dotsArray.forEach((dot, index) => {
       if (highlightIndices.includes(index)) {
-        dot.material.color.set('#64BC52');
+        dot.material.color.set(Color_newborn);
         dot.scale.set(2, 2, 2);
       } else {
-        dot.material.color.set('#CED3DD');
+        dot.material.color.set(Color_US);
         dot.scale.set(1, 1, 1);
       }
     });
@@ -126,7 +134,7 @@
     }
 
     scene2 = new THREE.Scene();
-    scene2.background = new THREE.Color(0xffffff);
+    scene2.background = new THREE.Color(background_grey);
 
     camera2 = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera2.position.z = 300;
@@ -238,6 +246,10 @@
           <div bind:this={container2} class="responsive-container right"></div>
         {/if}
       </div>
+      {#if currentStep > 1}
+      <div class="label fushun-label">Fushun, China</div>
+      <div class="label wayne-label">Wayne County, Michigan</div>
+    {/if}
     </div>
     <Steps bind:currentStep />
   </section>
@@ -258,6 +270,26 @@
   .animate {
     transform: translateX(-5%);
   }
+
+  .label {
+  position: absolute;
+  color: #fff;
+  text-anchor: start;
+  font-family: RetinaNarrow, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15.6px;
+}
+
+.fushun-label {
+  top: 15%; /* Adjust as needed */
+  left: 20%; /* Adjust as needed */
+}
+
+.wayne-label {
+  top: 15%; /* Adjust as needed */
+  right: 20%; /* Adjust as needed */
+}
 
   .parent-container {
     display: flex;
@@ -286,5 +318,7 @@
   main {
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #727272;
   }
+  
 </style>

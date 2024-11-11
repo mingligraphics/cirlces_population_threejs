@@ -3,11 +3,11 @@
     import Scrolly from "../helpers/Scrolly.svelte";
   
     $: steps = [
-    `<p>In China, the 20-64 age cohort grew several percentage points faster than other age groups during the years after the country implemented the one-child policy, giving the economy a shot in the arm. The window closed a decade ago.</p>`,
-    `A comparison with a broad group of 'less developed' countries shows a more extended but less dramatic window, lasting well into the middle of this century.`,
-    `While other countries still have a favorable age distribution, China's working-age population is shrinking, with more elderly to support.`,
-    `Population fluctuations, such as rolling effects of a 1960s famine, can create brief windows that have little effect on the long-term trend.
-    <br><br><span style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Note: Levels for Jan. 1 of each year <br> Source: U.N. Population Division and research by Danan Gu, a U.N. demographer</span>`
+    `The city of Fushun had a population of 1.75 million last year. Each dot represents 1,000 people in this graphic.`,
+    `There were 5,541 <span style="background-color:#A4D393;padding:3.5px;margin:1px;border-radius:4px;font-weight:500;color:black">newborns</span>.`,
+    `Wayne County in Michigan, which the city of Detroit locates, had roughly the same amount of population.`,
+    `Its <span style="background-color:#A4D393;padding:3.5px;margin:1px;border-radius:4px;font-weight:500;color:black">newborns</span> last year, however, were 20,065.
+    <br><br><span style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Sources: Fushun Municipal Government; CDC (Wayne County)</span>`
   ];
   
   </script>
