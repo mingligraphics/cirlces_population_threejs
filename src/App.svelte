@@ -18,8 +18,8 @@
   let duplicateCircle = false;
 
   // const Color_fushun = '#D991B2';
-  const Color_fushun = '#FCD7CB';
-  const Color_newborn = '#C7E3BB';
+  const Color_fushun = '#F9B9AC';
+  const Color_newborn = '#64BC52';
   const Color_US = '#BFBFBF';
   const background_white = 0xffffff;
   const background_black = 0x000000;
@@ -51,7 +51,7 @@
 
   onMount(() => {
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(background_grey);
+    scene.background = new THREE.Color(background_white);
 
     camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera.position.z = 300;
@@ -134,7 +134,7 @@
     }
 
     scene2 = new THREE.Scene();
-    scene2.background = new THREE.Color(background_grey);
+    scene2.background = new THREE.Color(background_white);
 
     camera2 = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera2.position.z = 300;
@@ -273,7 +273,7 @@
 
   .label {
   position: absolute;
-  color: #fff;
+  color: #333;
   text-anchor: start;
   font-family: RetinaNarrow, sans-serif;
   font-weight: 500;
@@ -318,7 +318,7 @@
   main {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #727272;
+    /* background-color: #727272; */
   }
   
 </style>
