@@ -281,14 +281,40 @@
   line-height: 15.6px;
 }
 
+@media (max-width: 600px) {
 .fushun-label {
-  top: 15%; /* Adjust as needed */
-  left: 20%; /* Adjust as needed */
+  top: 10%; 
+  left: 10%; 
 }
 
 .wayne-label {
-  top: 15%; /* Adjust as needed */
-  right: 20%; /* Adjust as needed */
+  top: 10%; 
+  right: 10%; 
+}
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .fushun-label {
+  top: 15%; 
+  left: 15%; 
+}
+
+.wayne-label {
+  top: 15%; 
+  right: 15%; 
+}
+}
+
+@media (min-width: 1025px) {
+.fushun-label {
+  top: 10%; 
+  left: 20%; 
+}
+
+.wayne-label {
+  top: 10%; 
+  right: 20%; 
+}
 }
 
   .parent-container {

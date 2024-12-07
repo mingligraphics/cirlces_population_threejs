@@ -7,7 +7,7 @@
     `There were only 5,541 <span style="background-color:#A4D393;padding:3.5px;margin:1px;border-radius:4px;font-weight:500;color:black">newborns</span>.`,
     `Wayne County in Michigan, which includes the city of Detroit, had roughly the same-size population.`,
     `Its number of <span style="background-color:#A4D393;padding:3.5px;margin:1px;border-radius:4px;font-weight:500;color:black">newborns</span>,  were 20,065, over three times as many as Fushun.
-    <br><br><span style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Sources: Fushun Municipal Government; CDC (Wayne County)</span>`
+    <br><br><span style="color: #727272;font-weight: 300; font-family: Retina, sans-serif;font-size: 13px;line-height: 17px; margin-top:6px;">Sources: Fushun Municipal Government; CDC (Wayne County)<br>Ming Li/WSJ</span>`
   ];
   
   </script>
